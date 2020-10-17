@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input, ViewChild, ElementRef} from '@angular/core';
 import { Country } from '../shared/country';
 import { Countries } from '../shared/countries';
 
@@ -8,10 +8,12 @@ import { Countries } from '../shared/countries';
   styleUrls: ['./country-detail.component.css']
 })
 export class CountryDetailComponent implements OnInit {
-  @Input()
-  country: Country;
   constructor() {
   }
+  @Input()
+  country: Country;
+
+  @ViewChild('info') info: ElementRef;
 
   ngOnInit(): void {
   }
@@ -26,6 +28,13 @@ export class CountryDetailComponent implements OnInit {
 
   changeInfo(event: any): void{
     this.country.addInfo = event.target.value;
+  }
+  showInfo(): void{
+    this.info.nativeElement.style.display = 'block';
+  }
+
+  hideInfo(): void{
+    this.info.nativeElement.style.display = 'none';
   }
 
 }

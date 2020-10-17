@@ -3,3 +3,12 @@ img{
   height: 200px;
   border: solid 1px black;
 }
+
+#content{
+  display: none;
+  margin-left: 100px;
+}
+
+#allCard{
+  display: flex;
+}
