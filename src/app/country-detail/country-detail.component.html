@@ -1,4 +1,4 @@
-<div>
+
   <mat-card id="allCard">
     <mat-card-header>
       <h4 (click)="showInfo()">{{country.name}}</h4>
@@ -9,11 +9,22 @@
         <p>Area: {{country.area}}</p>
         <p>Additional info: {{country.addInfo}}</p>
       <mat-card-actions>
-        <p>Change name: <input type="text" (keydown.enter) = "changeName($event)"></p>
-        <p>Change area: <input type="text" (keydown.enter)="changeArea($event)"></p>
-        <p>Change additional Info: <input type="text" (keydown.enter)="changeInfo($event)"></p>
+        <table>
+          <tr>
+            <td><p>Change name: </p></td>
+            <td><input type="text" (keydown.enter) = "changeName($event)"></td>
+          </tr>
+          <tr>
+            <td><p>Change area: </p></td>
+            <td><input type="text" (keydown.enter)="changeArea($event)"></td>
+          </tr>
+          <tr>
+            <td><p>Change additional info: </p></td>
+            <td><input type="text" (keydown.enter)="changeInfo($event)"></td>
+          </tr>
+        </table>
         <button (click)="hideInfo()">Hide</button>
       </mat-card-actions>
     </mat-card-content>
   </mat-card>
-</div>
+

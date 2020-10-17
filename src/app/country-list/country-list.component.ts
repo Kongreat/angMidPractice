@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Countries} from '../shared/countries';
+import { Countries } from '../shared/countries';
 
 @Component({
   selector: 'app-country-list',
